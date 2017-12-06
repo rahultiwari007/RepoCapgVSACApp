@@ -196,13 +196,13 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapgVSACApp\CapgVSACApp.csproj">
-      <Project>{c437c2de-34a8-470c-bcb7-2fc8af7d1584}</Project>
-      <Name>CapgVSACApp</Name>
-    </ProjectReference>
+    <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml" />
+    <ProjectReference Include="..\CapgVSACApp\CapgVSACApp.csproj">
+      <Project>{54c1476e-de16-48f2-8142-dba1d1568f9c}</Project>
+      <Name>CapgVSACApp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
