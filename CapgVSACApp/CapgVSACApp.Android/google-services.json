@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "903969994416",
+    "firebase_url": "https://capgvsacapp.firebaseio.com",
+    "project_id": "capgvsacapp",
+    "storage_bucket": "capgvsacapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903969994416:android:f266e419aac9da15",
+        "android_client_info": {
+          "package_name": "com.capgvsacapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903969994416-ro8kic410hk0v2m8hngdonlptlnhh4sn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.capgvsacapp",
+            "certificate_hash": "c04140352b5c06fa1717b23b65bde5bfb5d4b48c"
+          }
+        },
+        {
+          "client_id": "903969994416-qkjkiatngkflc07jrmiimm760gop49hp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC97S7QbS7lZcAbTc-BVB1VG3BN5-N3ZM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903969994416-qkjkiatngkflc07jrmiimm760gop49hp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
