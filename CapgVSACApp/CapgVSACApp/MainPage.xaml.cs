@@ -22,8 +22,14 @@ namespace CapgVSACApp
             properties.Add("FileName", "favorite.avi");
 
             Analytics.TrackEvent("Video clicked", properties);
-
+            Button bt = new Button();
+            bt.Clicked += Bt_Clicked;
             
+        }
+
+        private void Bt_Clicked(object sender, EventArgs e)
+        {
+             
         }
 
         private void btnSecond_Clicked(object sender, EventArgs e)
