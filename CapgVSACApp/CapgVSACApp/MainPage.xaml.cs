@@ -17,19 +17,17 @@ namespace CapgVSACApp
 
         private void btnFirst_Clicked(object sender, EventArgs e)
         {
+
+            myfun();
+        }
+
+       public void myfun()
+        {
             Dictionary<string, string> properties = new Dictionary<string, string>();
             properties.Add("Category", "Music");
             properties.Add("FileName", "favorite.avi");
 
             Analytics.TrackEvent("Video clicked", properties);
-            Button bt = new Button();
-            bt.Clicked += Bt_Clicked;
-            
-        }
-
-        private void Bt_Clicked(object sender, EventArgs e)
-        {
-             
         }
 
         private void btnSecond_Clicked(object sender, EventArgs e)
