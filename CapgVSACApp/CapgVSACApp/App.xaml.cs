@@ -16,7 +16,7 @@ namespace CapgVSACApp
         {
             InitializeComponent();
 
-            MainPage = new CapgVSACApp.MainPage();
+            MainPage = new CapgVSACApp.TestingPage();
         }
 
         protected override void OnStart()

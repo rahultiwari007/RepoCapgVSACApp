@@ -44,12 +44,14 @@
     <Compile Include="AppInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapgVSACApp\CapgVSACApp\CapgVSACApp.csproj">
-      <Project>{54c1476e-de16-48f2-8142-dba1d1568f9c}</Project>
-      <Name>CapgVSACApp</Name>
+    <ProjectReference Include="..\CapgVSACApp\CapgVSACApp.Android\CapgVSACApp.Android.csproj">
+      <Project>{c8dfd907-1f7f-4c33-b728-0f6b6fb4a818}</Project>
+      <Name>CapgVSACApp.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
