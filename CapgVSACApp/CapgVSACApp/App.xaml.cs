@@ -23,7 +23,22 @@ namespace CapgVSACApp
         {
             //AppCenter.Start("android=6c7f6211-cd8b-4dc1-9cb8-f79cbc47425e;" + "uwp={Your UWP App secret here};" + "ios={Your iOS App secret here}", typeof(Analytics), typeof(Crashes));
              AppCenter.Start("android=6c7f6211-cd8b-4dc1-9cb8-f79cbc47425e;", typeof(Analytics), typeof(Crashes), typeof(Push));
-            
+            Crashes.SetEnabledAsync(true);
+          
+            Crashes.ShouldAwaitUserConfirmation = () =>
+            {
+                Crashes.NotifyUserConfirmation(UserConfirmation.AlwaysSend);
+
+                return true;
+            };
+            Crashes.SendingErrorReport += (sender, e) =>
+            {
+                // Your code, e.g. to present a custom UI.
+            };
+            Crashes.FailedToSendErrorReport += (sender, e) =>
+            {
+                // Your code goes here.
+            };
             //AppCenter.Start("android=6c7f6211-cd8b-4dc1-9cb8-f79cbc47425e;", typeof(Push));
             // Handle when your app starts
         }

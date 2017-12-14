@@ -43,7 +43,7 @@ namespace CapgVSACApp.Droid
                         summary += $"\t\t{key} : {e.CustomData[key]}\n";
                     }
                 }
-                sendNotification(e.Message, e.Title);
+                sendNotification(e.Title, e.Message);
                 // Send the notification summary to debug output
                 System.Diagnostics.Debug.WriteLine(summary);
             };
@@ -59,16 +59,10 @@ namespace CapgVSACApp.Droid
             intent.PutExtra("Description", messageBody);
             intents[0] = intent;
             PendingIntent pendingIntent = PendingIntent.GetActivities(this, 0, intents, PendingIntentFlags.OneShot);
-           Android.Net.Uri defaultSoundUri = RingtoneManager.GetDefaultUri(RingtoneType.Notification);
-            NotificationCompat.Builder notificationbuilder =
-            new NotificationCompat.Builder(this)
-                    .SetSmallIcon(Resource.Drawable.icon)
-                    .SetContentTitle(title)
-                    .SetContentText(messageBody)
-                    .SetAutoCancel(true)
-                    .SetSound(defaultSoundUri)
-                    .SetContentIntent(pendingIntent)
-            .SetLargeIcon(BitmapFactory.DecodeResource(Resources, Resource.Drawable.icon)); ;
+            Android.Net.Uri defaultSoundUri = RingtoneManager.GetDefaultUri(RingtoneType.Notification);
+            NotificationCompat.Builder notificationbuilder =new NotificationCompat.Builder(this).SetSmallIcon(Resource.Drawable.icon).SetContentTitle(title)
+                    .SetContentText(messageBody).SetAutoCancel(true).SetSound(defaultSoundUri).SetContentIntent(pendingIntent)
+            .SetLargeIcon(BitmapFactory.DecodeResource(Resources, Resource.Drawable.icon)); 
 
             NotificationManager notificationManager = (NotificationManager)this.GetSystemService(Context.NotificationService);
             notificationManager.Notify(0, notificationbuilder.Build());

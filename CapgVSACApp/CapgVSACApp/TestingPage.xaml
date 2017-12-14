@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CapgVSACApp.TestingPage">
+             x:Class="CapgVSACApp.TestingPage" AutomationId="TestingPage1">
     <ContentPage.Content>
         <Grid Margin="10">
             <Grid.RowDefinitions>
@@ -11,8 +11,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Entry x:Name="txt1" Grid.Row="0" HorizontalTextAlignment="Center" AutomationId="val1" />
-            <Entry x:Name="txt2" Grid.Row="1" HorizontalTextAlignment="Center" AutomationId="val2"/>
+            <Entry x:Name="txt1" Grid.Row="0" HorizontalTextAlignment="Center" AutomationId="val1" Placeholder="First Value" />
+            <Entry x:Name="txt2" Grid.Row="1" HorizontalTextAlignment="Center" AutomationId="val2" Placeholder="Second Value"/>
             <Button x:Name="btnSum" Grid.Row="2" Clicked="btnSum_Clicked" Text="Add" BackgroundColor="Teal" TextColor="White" AutomationId="btnAdd" />
             <Button x:Name="btnMultiply" Grid.Row="3" Clicked="btnMultiply_Clicked" Text="Multiply" BackgroundColor="Purple" TextColor="White" AutomationId="btnMul" />
             <Label x:Name="lblresult" Grid.Row="4" HorizontalTextAlignment="Center" FontAttributes="Bold" AutomationId="labelResult"/>
